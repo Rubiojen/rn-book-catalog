@@ -54,14 +54,18 @@ const BookList = () => {
 
   if (error) {
     return (
-      <Text testID="error-message" style={styles.textPadding}>
+      <Text testID="error-message" style={styles.textMsg}>
         {error.message}
       </Text>
     );
   }
 
   if (books?.length === 0) {
-    return <Text testID="no-results">No results</Text>;
+    return (
+      <Text style={styles.textMsg} testID="no-results">
+        No books found
+      </Text>
+    );
   }
 
   return (
@@ -119,5 +123,5 @@ export default BookList;
 
 const styles = StyleSheet.create({
   listContainer: {padding: 16},
-  textPadding: {padding: 8},
+  textMsg: {padding: 8, fontSize: 36, fontWeight: 'bold'},
 });
