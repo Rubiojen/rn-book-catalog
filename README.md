@@ -1,7 +1,5 @@
 # rn-book-catalog
 
-Simple 
-
 Run server: cd server && npm run start
 
 Run client: 
